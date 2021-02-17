@@ -1,0 +1,17 @@
+<p>test-errors works!</p>
+<ng-container>
+    <button (click)='get500Response()' class="btn btn-outline-primary mr-3">Test 500 Error</button>
+
+    <button (click)='get400Response()' class="btn btn-outline-primary mr-3">Test 400 Error</button>
+    <button (click)='get401Response()' class="btn btn-outline-primary mr-3">Test 401 Error</button>
+    <button (click)='get404Response()' class="btn btn-outline-primary mr-3">Test 404 Error</button>
+    <button (click)='get400Validation()' class="btn btn-outline-primary mr-3">
+        Test 400 Validation Error</button>
+        <div class="row mt-5" *ngIf="validationErrors.length>0">
+            <ul class="text-danger">
+                <li *ngFor="let e of validationErrors">
+                    {{e}}
+                </li>
+            </ul>
+        </div>
+</ng-container>
