@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class ServerErrorComponent implements OnInit {
 error :any;
   constructor(private router:Router) {
-    const navigation=this.router.getCurrentNavigation();
+    const navigation=this.router.getCurrentNavigation();// we can get navigation extras only in constructor
     this.error=navigation?.extras?.state?.error;
     
    }
